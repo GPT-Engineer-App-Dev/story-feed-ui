@@ -9,15 +9,15 @@ const posts = [
 
 const Index = () => {
   return (
-    <Box p={5}>
+    <Box p={5} bg="#f6f6ef">
       <VStack spacing={4} align="stretch">
         {posts.map(post => (
-          <Box key={post.id} p={5} shadow="md" borderWidth="1px">
-            <Text fontSize="xl">
+          <Box key={post.id} p={5} bg="transparent">
+            <Text fontSize="14px" color="#828282">
               <Link color="teal.500" href={post.commentsLink}>{post.title}</Link>
             </Text>
-            <Text mt={2}>
-              <FaUser /> {post.author}
+            <Text mt={2} fontSize="12px" color="#828282">
+              {post.author}
             </Text>
           </Box>
         ))}
